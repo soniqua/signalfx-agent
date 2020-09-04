@@ -21,7 +21,7 @@ steps:
     pip install -r tests/requirements.txt
   displayName: 'Install pytest'
   condition: and(ne(variables.hasChanges, 'false'), ne(variables.hasChanges, False))
-- powershell: |
+- pwsh: |
     mkdir test_output -ea 0
     $msi_path = ""
     $nupkg_path = ""
